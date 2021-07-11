@@ -1,0 +1,10 @@
+                        Một số điều cần biết về Javascript
+Javascript Runtime và Javascript Engine
+    JS Runtime & Engine
+        JS Runtime: Xét trong môi trường browser(trình duyệt)
+        Đối với môi trường browser có 4 thành phần chính để giúp Javascript có thể chạy được cũng như xử lý được 
+            các task vụ bất đồng bộ: Js Engine, 
+        Trong đó có thành phần quan trọng nhất là Js Engine
+        Còn lại 3 thành phần khác là: Timers, XHR, DOM giúp cho Js có thể quản lý được các task vụ bất đồng bộ bao gồm
+            Web APIs, Even Loops và Callback Queues
+        Js là 1 ngôn ngữ đơn luồng(Single Thread), ko thể thực thi song song cùng 1 lúc 2 task vụ được
