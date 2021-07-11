@@ -8,3 +8,11 @@ Javascript Runtime và Javascript Engine
         Còn lại 3 thành phần khác là: Timers, XHR, DOM giúp cho Js có thể quản lý được các task vụ bất đồng bộ bao gồm
             Web APIs, Even Loops và Callback Queues
         Js là 1 ngôn ngữ đơn luồng(Single Thread), ko thể thực thi song song cùng 1 lúc 2 task vụ được
+Execution Context
+    Khi 1 đoạn chương trình Javascript được chạy thì Javascript Engine luôn luôn khởi tạo mới 1 Execution Context để theo 
+        dõi và và qản lý và giám sát trình tự thực thi
+    Đoạn chương trình này có thể là 1 chương trình con hoặc toàn bộ ứng dụng khi khởi chạy lần đầu tiên 
+        Chương trình chính(App): Global Execution Context 
+        Chương trình con: Local Execution Context
+    Khi Js Engine tạo ra một Execution Context thì nó luôn luôn qua 2 giai đoạn: Creation Phase và Execution Phase 
+    
