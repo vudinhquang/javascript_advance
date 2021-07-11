@@ -15,4 +15,18 @@ Execution Context
         Chương trình chính(App): Global Execution Context 
         Chương trình con: Local Execution Context
     Khi Js Engine tạo ra một Execution Context thì nó luôn luôn qua 2 giai đoạn: Creation Phase và Execution Phase 
+Creation Phase(Giai đoạn khởi tạo)
+    - Setup memory(Variables Envionments)
+    - Định nghĩa Scope Chain 
+        - Global Scope
+        - Script Scope 
+        - Block Scope 
+        - Function Scope 
+    - Ràng buộc từ khóa this (Ngoại trừ Arrow Function)
+        - Default binding
+        - Implicit binding 
+        - Explicit binding
+    Khi chạy 1 app có Global memory: global = window = this 
+    var: tầm vực global memory 
+    let, const: Tầm vực Script Scope
     
