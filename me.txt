@@ -65,4 +65,7 @@ Practice
     Practice 03
         Scope được hình thành trong giai đoạn Creation Phase phụ thuộc vào vị trí khai báo hàm chứ không phụ thuộc vào 
             vị trí gọi hàm 
+Parameters và Arguments
+    Function parameters là những tham số (variables) được đặt tên và liệt kê trong phần khai báo (định nghĩa) của một hàm
+    Function arguments là những đối số đã được xác định giá trị được truyền vào hàm tại thời điểm thực thi hàm đó.
     
