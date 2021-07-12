@@ -62,4 +62,7 @@ Practice
             window.hello='world'
             this.course='Javascript'
     Practice 02
+    Practice 03
+        Scope được hình thành trong giai đoạn Creation Phase phụ thuộc vào vị trí khai báo hàm chứ không phụ thuộc vào 
+            vị trí gọi hàm 
     
