@@ -29,4 +29,21 @@ Creation Phase(Giai đoạn khởi tạo)
     Khi chạy 1 app có Global memory: global = window = this 
     var: tầm vực global memory 
     let, const: Tầm vực Script Scope
+Practice
+    Practice 01
+        debugger
+            Call Stack
+                (anonymous)     hoising.js:1  -> Dòng code đang thực thi
+            Scope: Script, Global
+                2 tầm vực Script, Global vì đang chạy file hoising.js và các biến đang được khai báo ở cấp cao nhất của file
+            Global              Window
+                age, getFullName vì được khai báo bằng var
+                calAge vì được khai báo bằng function
+            Script: 
+                firstName, lastName, yearOfBirth vì được khai báo bằng let và const. Ngoài ra nếu các biến này được khai báo 
+                    trong các block {}, như if, else chẳng hạn thì sẽ có tầm vực là Block. Hoặc khai báo trong function thì 
+                    có tầm vực là function
+    hoising:  Khi Javascript khi một Execution Context được khởi tạo thì nó luôn luôn qua 2 giai đoạn: 
+        Creation Phase(khởi tạo) set up buộc nhớ để lưu lại
+        Execution Phase
     
