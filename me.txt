@@ -68,4 +68,10 @@ Practice
 Parameters và Arguments
     Function parameters là những tham số (variables) được đặt tên và liệt kê trong phần khai báo (định nghĩa) của một hàm
     Function arguments là những đối số đã được xác định giá trị được truyền vào hàm tại thời điểm thực thi hàm đó.
+First Class Objects trong Javascript
+    First Class Objects là những đối tượng cụ thể (entity, instance) trong lập trình mà tại thời điểm thực thi nó có thể được 
+        truyền như là một argument, được gán cho một biến bất kỳ hoặc có thể được return từ một function khác
+    First Class Function trong Javascript:
+        Function trong Javascript cũng được coi như 1 Objects cho nên 1 function có thể được truyền vào trong 1 function khác,
+            gán vào trong 1 biến, return 1 function ở bên trong 1 function khác
     
