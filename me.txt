@@ -61,4 +61,5 @@ Practice
         window, this: giúp chia sẻ dữ liệu giữa 2 file 
             window.hello='world'
             this.course='Javascript'
+    Practice 02
     
