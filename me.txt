@@ -96,4 +96,23 @@ Higher Order Functions và Callbacks
     func: Là Callback vì ở đây chỉ truyền tham chiếu của hàm vào thôi, thực tế hàm được gọi lại khi hàm cloneArrayAndDoSomething
         được thực thi 
     Callback: Gọi lại sau 
+Closure trong Javascript
+    Khi 1 hàm được khởi tạo thì Closure cũng được tạo theo, tức là tại thời điểm tạo ra hàm thì 1 Closure sẽ 
+        được gắn kèm với nó chứa tất cả các biến nằm ngoài tầm vực của hàm đó. Tức là 1 Closure sẽ cho phép 
+        1 function ở bên trong được phép truy cập vào những giá trị của function ở bên ngoài
+    Trong innerFunc sử dụng giá trị nào ở bên ngoài thì Closure sẽ lưu các giá trị đó
+    function outerFunc() {
+    let number = 20;
+    let course = 'Javascript nâng cao';
+    console.log("[scope outerFunc]", course);
+    function innerFunc() {
+        let number2 = 50;
+        let total = number2 + number;
+        console.log("[scope innerFunc]", total);
+        return total;
+    }
+    return innerFunc;
+    }
+    const func = outerFunc();
+    const result = func();
     
