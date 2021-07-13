@@ -74,4 +74,26 @@ First Class Objects trong Javascript
     First Class Function trong Javascript:
         Function trong Javascript cũng được coi như 1 Objects cho nên 1 function có thể được truyền vào trong 1 function khác,
             gán vào trong 1 biến, return 1 function ở bên trong 1 function khác
+Higher Order Functions và Callbacks
+    Higher order functions là những hàm thỏa một trong hai điều kiện sau:
+        Có thể nhận một function khác như là một đối số (argument)
+        Output là một function
+    Có rất nhiều Function cốt lõi của Javascript sử dụng cơ chế này khiến cho mã nguồn dễ đọc, đễ hiểu hơn
+        như map, filter, reduce, ..
+    function cloneArrayAndDoSomething(arrInput, func) {
+        var arrOutput = [];
+        for(var idx = 0; idx < arrInput.length; idx++) {
+            arrOutput.push(
+                func( arrInput[idx] );
+            )
+        }
+        return arrOutput;
+    }
+    const handleAdd3 = function(num) {
+        return num + 3;
+    }
+    const result = cloneArrayAndDoSomething(arr, handleAdd3);
+    func: Là Callback vì ở đây chỉ truyền tham chiếu của hàm vào thôi, thực tế hàm được gọi lại khi hàm cloneArrayAndDoSomething
+        được thực thi 
+    Callback: Gọi lại sau 
     
