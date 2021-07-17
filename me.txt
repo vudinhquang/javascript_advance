@@ -211,4 +211,10 @@ Practice
             1. Các lời gọi API sẽ có thời gian chạy khác nhau và ngâu nhiên
             2. Kết quả phải được hiển thị ra cho người dùng theo đúng thứ tự 1 -> 2 -> 3
     Practice 01 - Solution
+    Practice 02
+        Yêu cầu:
+            Các lời gọi API sẽ có thời gian chạy khác nhau và ngẫu nhiên.
+            Cả 3 lời gọi API phải được chạy đồng thời cùng một lúc.
+            Chỉ áp dụng các kiến thức cơ bản của Javascript (Không dùng Promise)
+            API nào chạy xong phải in kết quả ra ngay (Nhưng phải đảm bảo đúng thứ tự 1->2->3)
     

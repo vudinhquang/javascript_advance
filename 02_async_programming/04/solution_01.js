@@ -18,9 +18,9 @@ function fakeGetData(url, callbackFn) {
  *  1. Các lời gọi API sẽ có thời gian chạy khác nhau và ngâu nhiên
  *  2. Kết quả phải được hiển thị ra cho người dùng theo đúng thứ tự 1 -> 2 -> 3
  */
-fakeGetData('https://zendvn.com/api/1', function(res1) {
-  fakeGetData('https://zendvn.com/api/2', function(res2) {
-    fakeGetData('https://zendvn.com/api/3', function(res3) {
+fakeGetData('https://quangvu.com/api/1', function(res1) {
+  fakeGetData('https://quangvu.com/api/2', function(res2) {
+    fakeGetData('https://quangvu.com/api/3', function(res3) {
       console.log(res1);
       console.log(res2);
       console.log(res3);
