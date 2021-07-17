@@ -184,4 +184,14 @@ Single Thread và Blocking
     Thực thi theo kiểu đồng bộ từng dòng
     Blocking: Javascript chỉ xử lý đơn luồng nên dẫn đến vấn đề là Blocking, là đoạn code sẽ bị chặn khi mà đoạn code ở phía trên chưa 
         xử lý xong
+SetTimeout và những hiện tượng lạ
+    Các thành phần cốt lõi của Javascript:
+        Thread of execution
+        Memory/variable environment
+        Call stack
+    Chúng ta cần thêm nhiều thành phần nữa để xử lý:
+        Web APIs
+        Event loop,
+        Callback queues
+            Macro task queue and micro task queue
     
