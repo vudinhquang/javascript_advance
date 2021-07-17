@@ -190,8 +190,18 @@ SetTimeout và những hiện tượng lạ
         Memory/variable environment
         Call stack
     Chúng ta cần thêm nhiều thành phần nữa để xử lý:
-        Web APIs
-        Event loop,
+        Web APIs(browser)
+        Event loop
         Callback queues
             Macro task queue and micro task queue
+Concurrency model trong Javascript
+    SetTimeout là của Web APIs(browser) chứ không phải là của Javascript vì nếu là của Javascript thì nó phải thỏa mãn cơ chế
+        Single Thread. Tính năng thật sự của browser đó là Timers là bộ đếm của trình duyệt
+    Timers thực hiện đếm thời gian, nếu hết thời gian thì tham số hàm được truyền trong SetTimeout sẽ được gửi xuống 
+        Callbacks queue.
+    Một mình Javascript thì nó là Single Thread nhưng với sự hỗ trợ của trình duyệt thì 2 task được thực hiện song song 
+        trong quá trình Javascript Engine thực hiện task vụ thì Timers thực hiện đếm song song
+    Event loop là vòng lặp vô hạn, nó sẽ liên tục kiểm tra nếu như Call Stack rỗng, nghĩa là chương trình chạy song rồi không còn 
+        không còn code đồng bộ nào của Javascript để chạy thì mới cho phép hàm được set ở trong Callbacks queue đưa 
+        lên để thực thi. Khi được đưa lên để thực thi thì nó sẽ giống như Javascript thông thường
     
