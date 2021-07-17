@@ -141,4 +141,8 @@ Explicit Binding, bind, call và apply
         Là 1 method có sãn của Javascript, truyền vào 1 object bất kỳ. Object này sẽ được ràng buộc vào biến this 
         Khi gọi hàm bind() thì nó sẽ trả về 1 function mới đã được dàng buộc cố định object mà mình đã truyền vào 
         Có thể sử dụng hàm bind này để cố định this
+    Call và apply
+        Nhận vào một object bất kỳ trong tham số đầu tiên
+        Function này sẽ được gọi ngay lập tức
+        Return về kết quả của lời gọi hàm
     
