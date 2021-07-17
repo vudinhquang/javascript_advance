@@ -210,4 +210,5 @@ Practice
         Yêu cầu Challenge 01:
             1. Các lời gọi API sẽ có thời gian chạy khác nhau và ngâu nhiên
             2. Kết quả phải được hiển thị ra cho người dùng theo đúng thứ tự 1 -> 2 -> 3
+    Practice 01 - Solution
     
