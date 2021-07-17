@@ -205,4 +205,9 @@ Concurrency model trong Javascript
         không còn code đồng bộ nào của Javascript để chạy thì mới cho phép hàm được set ở trong Callbacks queue đưa 
         lên để thực thi. Khi được đưa lên để thực thi thì nó sẽ giống như Javascript thông thường
 Event Loop và Callback Queues
+Practice
+    Practice 01
+        Yêu cầu Challenge 01:
+            1. Các lời gọi API sẽ có thời gian chạy khác nhau và ngâu nhiên
+            2. Kết quả phải được hiển thị ra cho người dùng theo đúng thứ tự 1 -> 2 -> 3
     
