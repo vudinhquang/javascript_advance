@@ -115,4 +115,25 @@ Closure trong Javascript
     }
     const func = outerFunc();
     const result = func();
+Implicit Binding and This keyword
+    this được ràng buộc (binding) vào một Execution Context(ngữ cảnh thực thi) mỗi khi Execution Context này được khởi tạo
+    Khi nào Execution Context được khởi tạo khi
+        Khi gọi hàm (Execution Context)
+        Khi chạy ứng dụng (Global Execution Context)
+    Có 3 kiểu ràng buộc this:
+        Implicit Binding (Ràng buộc ngầm)
+            Thông qua dot notation 
+            ex: john.sum(10, 20);
+        Explicit Binding (Ràng buộc tường minh)
+            Do lập trình viên quyết định
+            Sử dụng các method có sẵn (built-in) của Javascript
+                .bind(this)
+                .call(this, arg1, arg2, ...)
+                .apply(this, [arg1, arg2, ...])
+        Default Binding (Ràng buộc mặc định)
+            Mặc định ràng buộc globalThis = window
+            ex:
+                var func = john.sum;
+                func(10, 20);
+            Trường hợp mặc định này thì nó cũng đúng với các function bình thường khi gọi biến this trong function đó 
     
