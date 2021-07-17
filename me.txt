@@ -152,4 +152,17 @@ Practice 04
             this của arrow function được coi như là Closure ở bên ngoài tức là Scope Chain ở bên ngoài
             -> chính là this của function bên ngoài nó 
         Để có thể truy cập được this chính là object hiện tại thì không được phép khai báo là arrow function
+Strict mode
+    const btnEl = document.getElementById('test-this')
+    const john = {
+        addEvent() {
+            btnEl.addEventListener('click', this.handleClick);
+        },
+        handleClick() {
+            console.log('handleClick', this);
+        }
+    }
+    this.handleClick ở đây thực hiện vai trò truyền hàm vào Javascript Dom chứ ko phải thực hiện gọi hàm theo kiểu dot notation.
+        Khi trình duyệt nhận diện được sự kiện của người dùng là click thì môi trường trình duyệt và môi trường Dom giúp ta gọi 
+            hàm này
     
