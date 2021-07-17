@@ -145,4 +145,11 @@ Explicit Binding, bind, call và apply
         Nhận vào một object bất kỳ trong tham số đầu tiên
         Function này sẽ được gọi ngay lập tức
         Return về kết quả của lời gọi hàm
+Practice 04
+    Arrow function không được ràng buộc this:
+        Phụ thuộc vào nơi khai báo function
+        Sử dụng this như là scope của function bên ngoài. 
+            this của arrow function được coi như là Closure ở bên ngoài tức là Scope Chain ở bên ngoài
+            -> chính là this của function bên ngoài nó 
+        Để có thể truy cập được this chính là object hiện tại thì không được phép khai báo là arrow function
     
