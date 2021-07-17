@@ -166,3 +166,16 @@ Strict mode
         Khi trình duyệt nhận diện được sự kiện của người dùng là click thì môi trường trình duyệt và môi trường Dom giúp ta gọi 
             hàm này
     
+            ==========================================================================================================
+
+                        Asynchronous Programming
+
+Concurrency, Parallelism
+    Concurrency (Đồng thời): Là khi hai hay nhiều tác vụ có thể bắt đầu xử lý, đang xử lý và hoàn tất trong
+        khoảng thời gian chồng chéo lên nhau.(overlapping time).
+        Trong 1 thời điểm nó chỉ xử lý 1 task vụ thôi, nếu task vụ này quá tốn thời gian, cần phải chờ thì có thể tạm dừng task 
+            vụ đó để chèn task vụ khác lên và xử lý tiếp. Khi task vụ khác xử lý xong thì sẽ quay trở lại task vụ đang chờ để xủ lý
+    Parallelism (Song song): Là khi hai hay nhiều tác vụ có thể bắt đầu xử lý, đang xử lý và hoàn tất trong
+        chính xác cùng một thời điểm -> Java
+    Javascript Concurrency Modal
+    
