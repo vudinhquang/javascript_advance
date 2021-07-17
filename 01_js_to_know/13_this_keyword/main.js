@@ -19,7 +19,10 @@ var john = {
     return x + y;
   }
 }
-var func = john.sum;
+var func = john.sum.bind({inputObj: 'vn1'});
 func(10, 20);
 const value1 = john.sum(10, 20);
+const value2 = john.sum.bind({ inputObj: 'vn2' })(10, 50);
+
 console.log('value1', value1); // 30
+console.log('value2', value2); // 60

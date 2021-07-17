@@ -118,7 +118,7 @@ Closure trong Javascript
 Implicit Binding and This keyword
     this được ràng buộc (binding) vào một Execution Context(ngữ cảnh thực thi) mỗi khi Execution Context này được khởi tạo
     Khi nào Execution Context được khởi tạo khi
-        Khi gọi hàm (Execution Context)
+        Khi gọi hàm (Execution Context) -> this có thể thay đổi tùy theo từng hàm
         Khi chạy ứng dụng (Global Execution Context)
     Có 3 kiểu ràng buộc this:
         Implicit Binding (Ràng buộc ngầm)
@@ -136,4 +136,9 @@ Implicit Binding and This keyword
                 var func = john.sum;
                 func(10, 20);
             Trường hợp mặc định này thì nó cũng đúng với các function bình thường khi gọi biến this trong function đó 
+Explicit Binding, bind, call và apply
+    Bind
+        Là 1 method có sãn của Javascript, truyền vào 1 object bất kỳ. Object này sẽ được ràng buộc vào biến this 
+        Khi gọi hàm bind() thì nó sẽ trả về 1 function mới đã được dàng buộc cố định object mà mình đã truyền vào 
+        Có thể sử dụng hàm bind này để cố định this
     
