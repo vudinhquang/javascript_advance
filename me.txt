@@ -204,4 +204,5 @@ Concurrency model trong Javascript
     Event loop là vòng lặp vô hạn, nó sẽ liên tục kiểm tra nếu như Call Stack rỗng, nghĩa là chương trình chạy song rồi không còn 
         không còn code đồng bộ nào của Javascript để chạy thì mới cho phép hàm được set ở trong Callbacks queue đưa 
         lên để thực thi. Khi được đưa lên để thực thi thì nó sẽ giống như Javascript thông thường
+Event Loop và Callback Queues
     
