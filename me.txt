@@ -178,4 +178,10 @@ Concurrency, Parallelism
     Parallelism (Song song): Là khi hai hay nhiều tác vụ có thể bắt đầu xử lý, đang xử lý và hoàn tất trong
         chính xác cùng một thời điểm -> Java
     Javascript Concurrency Modal
+Single Thread và Blocking
+    Javascript là ngôn ngữ lập trình đơn luồng.
+    Đơn luồng: Tại một thời điểm chỉ có duy nhất một câu lệnh được thực thi.
+    Thực thi theo kiểu đồng bộ từng dòng
+    Blocking: Javascript chỉ xử lý đơn luồng nên dẫn đến vấn đề là Blocking, là đoạn code sẽ bị chặn khi mà đoạn code ở phía trên chưa 
+        xử lý xong
     
