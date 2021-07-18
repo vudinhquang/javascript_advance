@@ -240,4 +240,8 @@ Design Pattern(Thunk Pattern)
         let thunkFn = createThunk();
         // Delay việc lâ ́y kêt qua Khi gọi thunk thì mới có data
         let result = thunkFn();
+Callback Hell
+    Callback tồn tại 2 vấn đề cần phải cải thiện:
+        1. Xử lý lỗi (Error handling issues)
+        2. Giao quyền kiểm soát chương trình cho bên thứ 3 (Trust Issues)
     
