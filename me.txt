@@ -261,4 +261,5 @@ Micro Tasks và Macro Tasks Queue
         setTimeout(), setInterval()
     Các dạng Micro Tasks: Dùng với Promise. Hàm truyền vào queueMicrotask()
 Queue_micro_task
+Fetch và Promise
     
