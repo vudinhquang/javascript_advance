@@ -269,4 +269,13 @@ Promise và Patterns
     Sau khi Web APIs thực hiện lời gọi HTTP hoàn tất, Web APIs sẽ chuyển function callback ngược xuống
         Callback Queues để chờ xử lý.
     Cụ thể là sẽ đưa vào Micro Tasks Queue
+Challenge Promise
+    Practice 01
+        Micro Tasks Queue có độ ưu tiên cao hơn Macro Tasks Queue. Nhưng độ ưu tiên cao hơn ở đây là tại cùng 1 thời điểm 
+            2 hàm cùng nằm trong Queue thì Micro Tasks Queue sẽ được ưu tiên trước
+        Ex:
+            SetTimeout: 0.1ms -> Callback function được chuyển vào Macro
+            Fetch hết 1ms -> Callback function được chuyển vào Micro 
+        2 Callback function này được đưa vào tại 2 thời điểm khác nhau nên khi Event Loop liên tục kiểm tra thì khi kiểm tra đến Queue 
+            của Macro thì khi đó Queue của Micro vẫn đang là 1 Queue rỗng
     
