@@ -217,4 +217,6 @@ Practice
             Cả 3 lời gọi API phải được chạy đồng thời cùng một lúc.
             Chỉ áp dụng các kiến thức cơ bản của Javascript (Không dùng Promise)
             API nào chạy xong phải in kết quả ra ngay (Nhưng phải đảm bảo đúng thứ tự 1->2->3)
+    Practice 02 - Solution
+        Higher Order Function, Callback
     
