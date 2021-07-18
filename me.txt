@@ -262,4 +262,11 @@ Micro Tasks và Macro Tasks Queue
     Các dạng Micro Tasks: Dùng với Promise. Hàm truyền vào queueMicrotask()
 Queue_micro_task
 Fetch và Promise
+Promise và Patterns
+    Thunk là một function cho phép delay quá trình lấy dữ liệu
+    Promise là một Object cũng cho phép delay quá trình lấy dữ liệu
+    Điểm đặc biệt của Promise là tất cả các function callback được gửi sang Web APIs để chờ
+    Sau khi Web APIs thực hiện lời gọi HTTP hoàn tất, Web APIs sẽ chuyển function callback ngược xuống
+        Callback Queues để chờ xử lý.
+    Cụ thể là sẽ đưa vào Micro Tasks Queue
     
