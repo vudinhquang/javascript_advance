@@ -219,4 +219,25 @@ Practice
             API nào chạy xong phải in kết quả ra ngay (Nhưng phải đảm bảo đúng thứ tự 1->2->3)
     Practice 02 - Solution
         Higher Order Function, Callback
+Design Pattern(Thunk Pattern)
+    Thunk chỉ là một tên gọi khác của Function
+    Function này là một dạng Function với ứng dụng đặc biệt
+    Thunk là một function có thể delay quá trình đánh giá biểu thức ra giá trị khi xử lý trong Javascript
+    Normal
+        // sub là một function thông thường
+        function sum(a, b) { return a + b }
+        // gọi hàm in ra ngay giá trị biểu thức 10 + 20
+        console.log( sum(10, 20) );
+    Thumb 
+        // function dùng để tạo ra một thunk
+        function createThunk() {
+            let result = sum(10, 20);
+            return function() {
+                return result;
+            }
+        }
+        // Tạo thunk và xử lý ra kêt qua
+        let thunkFn = createThunk();
+        // Delay việc lâ ́y kêt qua Khi gọi thunk thì mới có data
+        let result = thunkFn();
     
