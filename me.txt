@@ -245,3 +245,19 @@ Callback Hell
         1. Xử lý lỗi (Error handling issues)
         2. Giao quyền kiểm soát chương trình cho bên thứ 3 (Trust Issues)
     
+
+            ==========================================================================================================
+
+                        Promise
+
+Micro Tasks và Macro Tasks Queue
+    Callback Queues bao gồm hai loại hàng đợi (Queues) với thứ tự ưu tiên khác nhau
+        Tasks Queue - Macro Tasks Queue
+        Micro Tasks Queue
+    Điểm giống nhau của hai loại hàng đợi này là các tác vụ thực thi cần phải xếp hàng chờ khi Call Stack đang xử 
+        lý. Một khi Call Stack rỗng thì các tác vụ mới được phép di chuyển lần lượt để thực thi sau mỗi event loop.
+    Điểm khác biệt ở đây là xét về thứ tự ưu tiên. Micro Tasks sẽ có độ ưu tiên thực thi cao hơn Macro Tasks.
+    Các dạng Macro Tasks thường gặp: Hàm Callback từ sự kiện người dùng (Click, Scroll, ...). Hàm truyền vào 
+        setTimeout(), setInterval()
+    Các dạng Micro Tasks: Dùng với Promise. Hàm truyền vào queueMicrotask()
+    
