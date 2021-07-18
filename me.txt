@@ -260,4 +260,5 @@ Micro Tasks và Macro Tasks Queue
     Các dạng Macro Tasks thường gặp: Hàm Callback từ sự kiện người dùng (Click, Scroll, ...). Hàm truyền vào 
         setTimeout(), setInterval()
     Các dạng Micro Tasks: Dùng với Promise. Hàm truyền vào queueMicrotask()
+Queue_micro_task
     
