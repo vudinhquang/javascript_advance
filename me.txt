@@ -282,4 +282,5 @@ Challenge Promise
         block5Seconds(): Thêm 1 đoạn code blocking Javascript, không dùng tính năng nào của Web APIs cả nên nó là code đồng bộ ở trong 
             Javascript
         Sau khi chạy hết các đoạn code đồng bộ của Javascript thì SetTimeout và fetch mới được chạy 
+    Practice 03
     
