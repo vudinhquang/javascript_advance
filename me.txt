@@ -302,4 +302,11 @@ Promise All
         Ít nhất trong số Promise trong Array bị lỗi.
     Kết quả thành công sau khi xử lý chứa trong Promise mới trả về cũng là một Array theo thứ tự giống tự
         iterable truyền vào
+Practice 04
+    Đối với Promise All thì sẽ in ra 1 lượt 3 kết quả luôn, thời gian in là thời gian của kết Promise lâu nhất
+    Yêu cầu:
+        1. Các lời gọi API sẽ có thời gian chạy khác nhau và ngẫu nhiên.
+        2. Cả 3 lời gọi API phải được chạy đồng thời cùng một lúc.
+        3. Chỉ áp dụng các kiến thức liên quan tới Promise.
+        4. API nào chạy xong phải in kết quả ra ngay (Nhưng phải đảm bảo đúng thứ tự 1->2->3)
     
