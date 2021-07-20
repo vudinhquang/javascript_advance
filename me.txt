@@ -283,4 +283,8 @@ Challenge Promise
             Javascript
         Sau khi chạy hết các đoạn code đồng bộ của Javascript thì SetTimeout và fetch mới được chạy 
     Practice 03
+Promise Chain
+    Khi hàm Promise.prototype.then() được thực hiện và gửi kèm theo các Call Back cần thiết thì bản
+        thân nó cũng trả về một Promise.
+    Promise cho phép xử lí một chuỗi nhiều các tác vụ bất đồng bộ liên tiếp nhau.
     
