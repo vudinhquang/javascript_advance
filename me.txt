@@ -293,4 +293,13 @@ Promise Constructor
         trợ Promises.
     Trong Javascript hay trong Web APIs thì SetTimeout, setInterval, event... thì chưa hỗ trợ Promise
     Sử dụng từ khóa new để khởi tạo một Object Promise mới
+Promise All
+    Promise.all(iterable) là một phương thức của Object Promise giúp chạy đồng thời nhiều tác vụ cùng một lúc
+    Tham số truyền vào là một iterable - Tức là một array có thể lặp.
+    Mỗi phần tử của Array chính là một Promise khác
+    Promise.all(iterable) sẽ return về một Promise mới sẽ kết thúc khi:
+        Toàn bộ Promise trong Array truyền vào hoàn tất.
+        Ít nhất trong số Promise trong Array bị lỗi.
+    Kết quả thành công sau khi xử lý chứa trong Promise mới trả về cũng là một Array theo thứ tự giống tự
+        iterable truyền vào
     
