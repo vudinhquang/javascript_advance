@@ -287,4 +287,10 @@ Promise Chain
     Khi hàm Promise.prototype.then() được thực hiện và gửi kèm theo các Call Back cần thiết thì bản
         thân nó cũng trả về một Promise.
     Promise cho phép xử lí một chuỗi nhiều các tác vụ bất đồng bộ liên tiếp nhau.
+Promise Constructor
+    Promise() Constructor là một cách chính thức từ Javascript hỗ trợ cho lập trình viên có thể sử dụng tính
+        năng của Promise trong các Functions bất đồng bộ bằng cách Wrap các Functions đó nếu nó chưa hỗ
+        trợ Promises.
+    Trong Javascript hay trong Web APIs thì SetTimeout, setInterval, event... thì chưa hỗ trợ Promise
+    Sử dụng từ khóa new để khởi tạo một Object Promise mới
     
