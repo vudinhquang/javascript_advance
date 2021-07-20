@@ -309,4 +309,11 @@ Practice 04
         2. Cả 3 lời gọi API phải được chạy đồng thời cùng một lúc.
         3. Chỉ áp dụng các kiến thức liên quan tới Promise.
         4. API nào chạy xong phải in kết quả ra ngay (Nhưng phải đảm bảo đúng thứ tự 1->2->3)
+Recap Promise
+    Promise là một Object đặc biệt của Javascript(Không phải của Web APIs) đại diện cho một tác vụ được xử lý bất đồng bộ, và nó chứa giá trị trả về
+        cũng như là các giá trị lỗi xảy ra từ tác vụ đó.
+    Promise sinh ra để giải quyết các vấn đề của Callback và Callback Hell
+    Callback Hell gặp 2 vấn đề chính:
+        Handle Error
+        Trust Issues
     
