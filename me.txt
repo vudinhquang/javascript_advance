@@ -352,4 +352,13 @@ Iterable và Iterator Protocol
         Hàm next() không nhận vào tham số nhưng khi được gọi sẽ trả về một Object có hai thuộc tính
             value và done
 Practice 02
+Symbol
+    Bản đặc tả ngôn ngữ từ ECMA:
+        https://262.ecma-international.org/11.0/#sec-ecmascript-language-types-symbol-type
+    Kiểu dữ liệu symbol có thể được sử dụng làm key của một Object, đóng vai trò là thuộc tính của Object đó
+    Mỗi giá trị Symbol được tạo ra có giá trị độc nhất vô nhị (Không bao giờ bị trùng với những giá trị khác)
+        và không thể thay đổi được
+    Ứng dụng:
+        Tạo ra các Hidden Properties (Như trong Promise)
+        Đảm bảo sự an toàn của một Object khi trao đổi qua các môi trường khác nhau -> Trust issues
     
