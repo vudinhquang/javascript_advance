@@ -361,4 +361,7 @@ Symbol
     Ứng dụng:
         Tạo ra các Hidden Properties (Như trong Promise)
         Đảm bảo sự an toàn của một Object khi trao đổi qua các môi trường khác nhau -> Trust issues
+Generator Concepts
+    Generator Object là một Object đặc biệt được return từ một Generator Function
+    Generator Function là một dạng hàm đặc biệt trong Javascript được khai báo bằng từ khóa function*
     
