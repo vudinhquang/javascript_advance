@@ -351,4 +351,5 @@ Iterable và Iterator Protocol
         Có hiện thực hàm next() là method của nó
         Hàm next() không nhận vào tham số nhưng khi được gọi sẽ trả về một Object có hai thuộc tính
             value và done
+Practice 02
     
