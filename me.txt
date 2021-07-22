@@ -317,3 +317,25 @@ Recap Promise
         Handle Error
         Trust Issues
     
+            ==========================================================================================================
+
+                        Iterators, Generators và Async Await
+
+Iteration Protocols
+    Iterators và Generators là các khái niệm cốt lõi, cội nguồn để chúng ta hiểu được cách Async và Await hoạt động
+    Async Await là tính năng mới xuất hiện trong Javascript ES7
+    Iteration protocols:
+        Đây không phải là cú pháp mới được xây dựng trong Javascript
+        Iteration Protocols chỉ là những giao thức mới xuất hiện trong ES6 cho phép lập trình viên có thể tự định
+            nghĩa cách thức lặp của một Object bất kỳ
+        Bản chất Array cũng đã hiện thực giao thức này ngầm ở bên dưới, do đó chúng ta có thể sử dụng những
+            tính năng mới để lặp qua một Array như forEach(), for..in, for..of, map(), ...
+        Để áp dụng các giao thức này chúng ta cần tuân thủ quy tắc của 2 giao thức mà Javascript cung cấp:
+            Iterable protocol và Iterator protocol
+    Xây dựng:
+        Lặp từng phần tử của Array theo thời gian không cố định
+        Khi nào gọi hàm next() thì sẽ lặp một lần
+        next() trả về một object có value và done
+            value là giá trị mỗi phần tử
+            done là giá trị boolean cho biết còn lặp được nữa hay không?
+    
