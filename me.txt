@@ -383,4 +383,5 @@ Kết hợp Generators với Promise
         Để tận dụng được sức mạnh của Generator thì cần kết hợp thêm với Promise để có cái bất đồng bộ khi đang thực hiện 1 
             bất đồng bộ trong Generator Function thì cho phép nhảy ngược ra để thực hiện các câu lệnh không liên quan. Khi 
             Promise thực hiện thành công trả về dữ liệu thì mới quay trở lại để thực thi tiếp trong Generator Function
+    Generator và Promise 02
     
