@@ -377,4 +377,10 @@ Truyền thông điệp với Generator Function
     Passing messages 02
         yield (30 + 200) -> return 230 
         (yield 30) + 200 -> return 30
+Kết hợp Generators với Promise
+    Generator và Promise 01
+        Generator là đồng bộ 
+        Để tận dụng được sức mạnh của Generator thì cần kết hợp thêm với Promise để có cái bất đồng bộ khi đang thực hiện 1 
+            bất đồng bộ trong Generator Function thì cho phép nhảy ngược ra để thực hiện các câu lệnh không liên quan. Khi 
+            Promise thực hiện thành công trả về dữ liệu thì mới quay trở lại để thực thi tiếp trong Generator Function
     
