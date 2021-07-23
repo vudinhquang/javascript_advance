@@ -24,4 +24,24 @@ function* generatorFunc() {
 
 const genObj = generatorFunc();
 
-console.log("genObj", genObj);
+const data1 = genObj.next(); // { value: 30, done: false }
+
+console.log('data1', data1);
+
+console.log('.......... 3s .......');
+
+const data2 = genObj.next();
+
+console.log('data2', data2); // { value: 100, done: false }
+
+console.log('....... 5s .........')
+
+const data3 = genObj.next();
+
+console.log('data3', data3); // { value: [], done: false }
+
+const data4 = genObj.next(); // { value: undefined, done: true }
+
+console.log('data4', data4)
+
+console.log(genObj);

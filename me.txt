@@ -364,4 +364,8 @@ Symbol
 Generator Concepts
     Generator Object là một Object đặc biệt được return từ một Generator Function
     Generator Function là một dạng hàm đặc biệt trong Javascript được khai báo bằng từ khóa function*
+Generator Function và từ khóa yield
+    Khi gọi hàm Generator Function thì nó không thực thi ngay mà nó chỉ nhờ Javascript return 1 Generator Object, sau 
+        đó muốn nhảy vào hàm Generator Function để chạy thì phải sử dụng các method như next() của Iterator
+    yield: Tạm dừng hàm ở ngay vị trí đó và thực hiện return value
     
