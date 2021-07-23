@@ -368,4 +368,10 @@ Generator Function và từ khóa yield
     Khi gọi hàm Generator Function thì nó không thực thi ngay mà nó chỉ nhờ Javascript return 1 Generator Object, sau 
         đó muốn nhảy vào hàm Generator Function để chạy thì phải sử dụng các method như next() của Iterator
     yield: Tạm dừng hàm ở ngay vị trí đó và thực hiện return value
+Truyền thông điệp với Generator Function
+    Passing messages 01
+        Các đặc điểm quan trọng của Generator Function:
+            Tạm dừng thực thi tại một dòng lệnh bất kỳ bằng từ khóa yield
+            Trả về một giá trị value ra bên ngoài thông qua kết quả của việc gọi method next()
+            Truyền thông điệp ngược vào bên trong ngay vị trí khai báo yield trước đó để thực thi các dòng lệnh tiếp theo
     
