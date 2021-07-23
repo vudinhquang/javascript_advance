@@ -374,4 +374,7 @@ Truyền thông điệp với Generator Function
             Tạm dừng thực thi tại một dòng lệnh bất kỳ bằng từ khóa yield
             Trả về một giá trị value ra bên ngoài thông qua kết quả của việc gọi method next()
             Truyền thông điệp ngược vào bên trong ngay vị trí khai báo yield trước đó để thực thi các dòng lệnh tiếp theo
+    Passing messages 02
+        yield (30 + 200) -> return 230 
+        (yield 30) + 200 -> return 30
     
