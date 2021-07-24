@@ -397,4 +397,8 @@ Async Await
         Nếu function Throw một error. Giá trị error này sẽ là kết quả của Promise khi xử lý thất bại.
 Thực hành Async
     Practice Async 01
-     
+    Practice Async 02
+        then() được đưa vào micro task queue 
+        SetTimeout() được đưa vào Macro task queue
+        await() Thoát ra khỏi hàm để thực hiện các task bên ngoài hàm(bản chất là cũng có then)
+    
