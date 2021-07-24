@@ -401,4 +401,9 @@ Thực hành Async
         then() được đưa vào micro task queue 
         SetTimeout() được đưa vào Macro task queue
         await() Thoát ra khỏi hàm để thực hiện các task bên ngoài hàm(bản chất là cũng có then)
+Generator và Babel
+    Generator là tính năng mới của Javascript
+    Generator không chạy được trình trình duyệt cũ như IE
+    Muốn sử dụng tính năng của Generator trong các trình duyệt có thể sử dụng Babel để biên dịch ngược lại cú pháp cũ
+    Build
     
