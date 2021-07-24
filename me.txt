@@ -395,4 +395,6 @@ Async Await
     Async Function luôn luôn ngầm return về một Promise
         Nếu bên trong function return về một giá trị. Giá trị đó sẽ là kết quả của Promise khi xử lý thành công.
         Nếu function Throw một error. Giá trị error này sẽ là kết quả của Promise khi xử lý thất bại.
-    
+Thực hành Async
+    Practice Async 01
+     
