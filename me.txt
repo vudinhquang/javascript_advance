@@ -384,4 +384,15 @@ Kết hợp Generators với Promise
             bất đồng bộ trong Generator Function thì cho phép nhảy ngược ra để thực hiện các câu lệnh không liên quan. Khi 
             Promise thực hiện thành công trả về dữ liệu thì mới quay trở lại để thực thi tiếp trong Generator Function
     Generator và Promise 02
+Async Await
+    Async Function là một hàm được định nghĩa với từ khóa async phía trước
+    Await là một từ khóa chỉ được phép sử dụng trong Async Function để xử lý việc chờ đợi một tác vụ bất đồng bộ nào đó
+    Cơ chế hoạt động bản chất dựa trên Promise và Generator
+    Xuất hiện trong phiên bản từ Javascript ES7 trở lên
+    Async và Await giúp phong cách lập trình bất đồng bộ trở nên rõ ràng hơn, không cần phải sử dụng
+        Promise Chain một cách tường minh. Javascript sẽ chúng lập trình viên xử lý ngầm những công việc
+        này.
+    Async Function luôn luôn ngầm return về một Promise
+        Nếu bên trong function return về một giá trị. Giá trị đó sẽ là kết quả của Promise khi xử lý thành công.
+        Nếu function Throw một error. Giá trị error này sẽ là kết quả của Promise khi xử lý thất bại.
     
