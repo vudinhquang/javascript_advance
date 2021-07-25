@@ -460,4 +460,5 @@ Array và các methods thường gặp
         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
     Map 
     Filter
+    Take
     
