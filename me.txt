@@ -438,4 +438,21 @@ Intro
         Ai là người quản lý việc gửi dữ liệu?
         Iterators: Chúng ta kiểm soát việc lấy dữ liệu
         Events: Chúng ta không kiểm soát việc lấy dữ liệu.
+Tại sao nên dùng Observable Pattern
+    Có rất nhiều Cấu trúc dữ liệu có thể áp dụng giao thức Iterable và Iterator (Object, String, ...)
+    setTimeout có thể được wrapped bởi Promise Object
+    DOM Events, XMLHTTPRequest, setInterval, WebSocket, ...
+    Array có những built-in methods như map, filter, forEach, ...
+    Observable Pattern giúp chuẩn hóa tất cả các mô hình Producer-Consumer về chung cách thức xử lý
+        Producer là người kiểm soát việc gửi dữ liệu.
+        Consumer là người subscribe để nhận dữ liệu từ Producer
+        Consumer có thể unsubscribe để từ chối nhận dữ liệu từ Producer
+    Chuyện gì sẽ xảy ra nếu tư duy và xử lý dữ liệu gửi đến cho Consumer giống như một Collection?
+    Array và Events đều là một tập hợp (Collection) nhiều phần tử
+        Array: Xử lý phần tử liên tục (forEach, map, filter)
+        Observable: Xử lý phần tử ngắt quãng theo thời gian
+    Tại sao không dùng Promise?
+        Promise được thiết kế chỉ resolve hoặc reject một lần
+        Xử lí nhiều dữ liệu phải tạo nhiều Promise
+        Không thể cancel một Promise
     
