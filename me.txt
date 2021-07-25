@@ -461,4 +461,5 @@ Array và các methods thường gặp
     Map 
     Filter
     Take
+    ConcatAlll
     
