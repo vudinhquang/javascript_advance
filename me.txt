@@ -459,4 +459,5 @@ Array và các methods thường gặp
     Foreach
         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
     Map 
+    Filter
     
