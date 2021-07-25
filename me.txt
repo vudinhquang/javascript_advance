@@ -455,4 +455,7 @@ Tại sao nên dùng Observable Pattern
         Promise được thiết kế chỉ resolve hoặc reject một lần
         Xử lí nhiều dữ liệu phải tạo nhiều Promise
         Không thể cancel một Promise
-    
+Array và các methods thường gặp
+    Foreach
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+        
