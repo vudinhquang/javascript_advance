@@ -462,4 +462,15 @@ Array và các methods thường gặp
     Filter
     Take
     ConcatAlll
+Observable rules
+    Áp dụng cho tất cả những dạng theo mô hình Producer - Consumer
+    Lưu ý:
+        Producer phải là nơi quản lý việc gửi dữ liệu và phát tính hiệu
+        Consumer phải là người đăng ký (subscribe, forEach) nhận dữ liệu
+        Consumer phải có hỗ trợ phương thức để hủy đăng ký (unsubscribe)
+    Sau khi subscribe sẽ return về một subscription. Bên trong subscription sẽ chứa một function dùng để hủy 
+        đăng ký nhận dữ liệu
+    Mục tiêu: Hiện thực các method (map, filter, take, forEach, ...) có thể áp dụng cho tất cả các mô hình 
+        Producer - Consumer khi bọc chúng vào trong Observable Pattern
+        Ví dụ: setTimeout, setInterval, Events, fetch, ....
     
