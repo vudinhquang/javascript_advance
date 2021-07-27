@@ -480,4 +480,7 @@ Observable timeout
     forEach tạm thời được hiểu là subscribe
     Sau khi subscribe sẽ return về một subscription. Bên trong subscription sẽ chứa một function dùng để hủy 
         đăng ký nhận dữ liệu
+Interval
+    SetTimeout chỉ chạy 1 lần nên có thể dùng được trong Promise, Observable. Tuy nhiên Interval chạy nhiều lần
+        do đó nó không thể dùng được trong Promise nhưng có thể dùng được trong Observable
     
