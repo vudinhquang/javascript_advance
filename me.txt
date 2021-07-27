@@ -484,3 +484,7 @@ Observable Interval
     SetTimeout chỉ chạy 1 lần nên có thể dùng được trong Promise, Observable. Tuy nhiên Interval chạy nhiều lần
         do đó nó không thể dùng được trong Promise nhưng có thể dùng được trong Observable
 Observable fromEvent
+Observable take
+    https://rxmarbles.com/#take
+    Cơ chế lan truyền sự kiện
+    
