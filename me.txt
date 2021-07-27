@@ -473,4 +473,11 @@ Observable rules
     Mục tiêu: Hiện thực các method (map, filter, take, forEach, ...) có thể áp dụng cho tất cả các mô hình 
         Producer - Consumer khi bọc chúng vào trong Observable Pattern
         Ví dụ: setTimeout, setInterval, Events, fetch, ....
+Observable timeout
+    Observable.timeout(1000)
+        Khi gọi hàm timeout() thì nó chưa được phép kích hoạt mà nó chỉ được phép kích hoạt khi hàm subscribe() 
+        được gọi
+    forEach tạm thời được hiểu là subscribe
+    Sau khi subscribe sẽ return về một subscription. Bên trong subscription sẽ chứa một function dùng để hủy 
+        đăng ký nhận dữ liệu
     
