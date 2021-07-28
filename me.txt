@@ -489,4 +489,10 @@ Observable take
     Cơ chế lan truyền sự kiện
 Observable map
 Observable filter
+So sánh page, client và offset
+    body - cửa sổ màn hình - khối box
+    Kích thước cửa sổ màn hình, chỉ nhìn được 1 phần của body. Nếu muốn nhìn toàn bộ body thì phải Scroll chuột
+    pageX, pageY: Là giá trị theo trục x và trục y của con trỏ chuột đối với body
+    clientX, clientY: Giá trị đối với cửa sổ màn hình
+    offsetX, offsetY: Giá trị đối với viền của khối box(div...)
     
