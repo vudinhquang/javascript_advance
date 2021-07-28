@@ -2,50 +2,6 @@ function Observable(forEachWaitToRun) {
   this.forEach = forEachWaitToRun;
 }
 
-Observable.timeout = function(miliseconds) {
-
-  function timeoutWaitToRun(onNextFn) {
-    console.log('[Observable Timeout] Bat dau dang ky nhan du lieu')
-
-    const timeoutId = setTimeout(() => {
-      onNextFn(miliseconds)
-    }, miliseconds);
-
-    return {
-      unsubscribe: function() {
-        console.log('[Observable Timeout] Huy dang ky nhan du lieu')
-        clearTimeout(timeoutId)
-      }
-    }
-  }
-
-  const newObs$ = new Observable(timeoutWaitToRun);
-
-  return newObs$
-}
-
-Observable.interval = function(miliseconds) {
-  
-  function intervalWaitToRun(onNextFn) {
-    console.log('[Observable Interval] Bat dau dang ky nhan du lieu')
-
-    const intervalId = setInterval(() => {
-      onNextFn(miliseconds)
-    }, miliseconds);
-
-    return {
-      unsubscribe: function() {
-        console.log('[Observable Interval] Huy dang ky nhan du lieu')
-        clearInterval(intervalId)
-      }
-    }
-  }
-
-  const newObs$ = new Observable(intervalWaitToRun)
-
-  return newObs$
-}
-
 Observable.fromEvent = function(domEl, eventName) {
   function fromEventWaitToRun(onNextFn) {
     function handlerEvent(evt) {
@@ -119,3 +75,17 @@ Observable.prototype.map = function(callbackFn) {
 
   return newObs$
 }
+
+const boxEl = document.querySelector('#box')
+
+window.subscription = Observable.fromEvent(boxEl, 'mousemove')
+  .take(10)
+  .map(evt => {
+    return {
+      pageX: evt.pageX,
+      pageY: evt.pageY
+    }
+  })
+  .forEach((data) => {
+    console.log('data', data)
+  })

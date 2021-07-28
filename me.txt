@@ -487,4 +487,5 @@ Observable fromEvent
 Observable take
     https://rxmarbles.com/#take
     Cơ chế lan truyền sự kiện
+Observable map
     
