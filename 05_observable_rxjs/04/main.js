@@ -142,3 +142,27 @@ Observable.prototype.filter = function(testFn) {
 
   return newObs$
 }
+
+Observable.prototype.debounceTime = function(miliseconds) {
+  const source$ = this
+
+  function debounceTimeWaitToRun(newOnNextFn) {
+
+    let timeoutId = null
+
+    source$.forEach(data => {
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+
+      timeoutId = setTimeout(() => {
+        newOnNextFn(data)
+        timeoutId = null
+      }, miliseconds);
+    })
+
+  }
+
+  return new Observable(debounceTimeWaitToRun)
+}
