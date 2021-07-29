@@ -24,4 +24,14 @@ $....................
                                   $............................[{}, {}].......$   
 $
 
+
+[ { id, label }, { id, label } ]
+
+---- map -> `<div class="list-group-item">{{ label }}</div>`
+
+[ 
+  `<div class="list-group-item">{{ label }}</div>`, 
+  `<div class="list-group-item">{{ label }}</div>`, 
+]
+
 */

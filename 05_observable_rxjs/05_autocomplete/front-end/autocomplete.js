@@ -4,6 +4,7 @@ function makeURLSearch(str) {
 
 function autoComplete() {
     const inputEl = document.querySelector("#js-input-search");
+    const resultsEl = document.querySelector("#js-results");
 
     Observable.fromEvent(inputEl, "input")
         .map(evt => evt.target.value)
@@ -16,9 +17,13 @@ function autoComplete() {
         .map((url) => Observable.fetch(url))
         .forEach((fetchObs$) => {
             fetchObs$
-              .forEach(res => {
-                console.log("res", res);
-              });
+                .map(arrResponse => {
+                    return arrResponse.map(item => `<div class="list-group-item">${item.label}</div>`)
+                })
+                .map(arrHTML => arrHTML.join(''))
+                .forEach(strHTML => {
+                    resultsEl.innerHTML = strHTML;
+                });
         });
 }
 

@@ -524,4 +524,5 @@ Xây dựng Autocomplete Component
         Bắt buộc phải nhập ít nhất 2 ký tự thì mới tiến hành gọi API
         map((url) => Observable.fetch(url)) nhận được Observable nhưng thực chất fetch chưa được chạy nghĩa là API chưa được gọi, fetch
             gọi API chỉ được chạy khi Observable này được subscribe 
+    Display results
     
