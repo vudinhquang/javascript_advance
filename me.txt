@@ -496,4 +496,12 @@ So sánh page, client và offset
     clientX, clientY: Giá trị đối với cửa sổ màn hình
     offsetX, offsetY: Giá trị đối với viền của khối box(div...)
 Observable debounceTime
+Xây dựng event double click
+    Các hàm đã xây dựng ở trên thì chủ yếu biến đổi từ 1 Observable gốc về 1 Observable mới tức là theo tỷ lệ 1:1
+    Observable debounceTime là mô hình kết hợp 2 Observable tạo thành 1 Observable mới
+    Khi Observable 1 nhận được event thì nó sẽ tạm thời lưu lại chứ chưa gửi xuống cho Observable kết quả chỉ khi nào 
+        nó gặp 1 sự kiện được đưa đến từ Observable thứ 2 thì nó sẽ gộp tất cả các dữ liệu phía trước mà mình đã lưu lại 
+        gộp vào trong 1 Array để gửi xuống cho Observable kết quả
+    Kết hợp với debounceTime và filter để xây dựng 1 event mới trong JavaScript đó là bắt sự kiện người dùng nhấn double click
+        tức là nhấn chuột 2 lần liên tục. Đây là event không có sẵn trong Javascript
     

@@ -166,3 +166,29 @@ Observable.prototype.debounceTime = function(miliseconds) {
 
   return new Observable(debounceTimeWaitToRun)
 }
+
+Observable.prototype.buffer = function(closeObs$) {
+  const source$ = this;
+  
+  function bufferWaitToRun(onNewNextFn) {
+    let resultsData = []
+
+    const subSource = source$.forEach((dataSource) => {
+      resultsData.push(dataSource)
+    })
+
+    const subClose = closeObs$.forEach(() => {
+      onNewNextFn(resultsData)
+      resultsData = []
+    })
+
+    return {
+      unsubscribe: function() {
+        subSource.unsubscribe()
+        subClose.unsubscribe()
+      }
+    }
+  }
+
+  return new Observable(bufferWaitToRun)
+}
