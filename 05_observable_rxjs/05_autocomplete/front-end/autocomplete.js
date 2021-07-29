@@ -42,8 +42,22 @@ function makeURLSearch(str) {
 }
 
 function autoComplete() {
+    let queryStr = ''
     const inputEl = document.querySelector("#js-input-search");
     const resultsEl = document.querySelector("#js-results");
+
+    function handleMapArrayToHTML(arrResponse) {
+        return arrResponse.map(
+          (item) => {
+            const regex = new RegExp(queryStr, 'gi')
+            const originLabel = item.label;
+    
+            const newLabel = originLabel
+              .replace(regex, str => '<span class="hight-light">' + str + '</span>');
+            return `<div class="list-group-item">${newLabel}</div>`
+          }
+        ).join('')
+    }
 
     Observable.fromEvent(inputEl, "input")
         .map(evt => evt.target.value)
@@ -57,10 +71,7 @@ function autoComplete() {
         .forEach((fetchObs$) => {
             resultsEl.innerHTML = renderIconLoading();
             fetchObs$
-                .map(arrResponse => {
-                    return arrResponse.map(item => `<div class="list-group-item">${item.label}</div>`)
-                })
-                .map(arrHTML => arrHTML.join(''))
+                .map(handleMapArrayToHTML)
                 .forEach(strHTML => {
                     if (strHTML === "") {
                         resultsEl.innerHTML = renderIconEmpty();

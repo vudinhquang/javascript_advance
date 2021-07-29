@@ -526,4 +526,5 @@ Xây dựng Autocomplete Component
             gọi API chỉ được chạy khi Observable này được subscribe 
     Display results
     Loading, empty icon
+    Highlight search
     
