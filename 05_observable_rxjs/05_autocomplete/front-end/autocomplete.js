@@ -14,9 +14,12 @@ function autoComplete() {
             return makeURLSearch(searchStr)
         })
         .map((url) => Observable.fetch(url))
-        .forEach(data => {
-            console.log("data", data)
-        })
+        .forEach((fetchObs$) => {
+            fetchObs$
+              .forEach(res => {
+                console.log("res", res);
+              });
+        });
 }
 
 autoComplete()
