@@ -505,7 +505,12 @@ Xây dựng event double click
     Kết hợp với debounceTime và filter để xây dựng 1 event mới trong JavaScript đó là bắt sự kiện người dùng nhấn double click
         tức là nhấn chuột 2 lần liên tục. Đây là event không có sẵn trong Javascript
 Xây dựng Autocomplete Component
-    Setup server backend
-        npm start 
+    Setup server backend(in back-end folder)
+        in back-end folder: npm start 
         Browser: http://localhost:8888/data?search=nur
+    Setup live-server(in back-end folder)
+        in back-end folder: npm install -g live-server
+        live-server -v 
+        live-server --port=8090
+            -> http://127.0.0.1:8090/
     
