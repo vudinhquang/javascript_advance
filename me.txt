@@ -513,4 +513,10 @@ Xây dựng Autocomplete Component
         live-server -v 
         live-server --port=8090
             -> http://127.0.0.1:8090/
-    
+    fetch
+        Bản chất của fetch trong JavaScript là nó sử dungj Promise ở bên dưới nên nếu áp dụng mô hình fetch này vào trong Observable 
+            thì mỗi lầ subscribe thì chỉ chạy 1 lần thôi
+        Ứng với mỗi string thì sẽ đưa về 1 Observable của fetch
+        Tầm vực: Khi khai báo 1 function thì bản thân function cũng là object nên nó được lưu vào trong window(function, var được lưu
+            vào trong window) do đó có thể chia sẻ qua 1 file js khác 
+        

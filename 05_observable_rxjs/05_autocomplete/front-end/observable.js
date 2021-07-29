@@ -64,6 +64,24 @@ Observable.fromEvent = function(domEl, eventName) {
   return new Observable(fromEventWaitToRun)
 }
 
+Observable.fetch = function(url, params = {}) {
+  function fetchWaitToRun(onNextFn) {
+    fetch(url, params)
+      .then(res => res.json())
+      .then(data => {
+        onNextFn(data)
+      })
+
+    return {
+      unsubscribe() {
+        // TODO ...
+      }
+    }
+  }
+
+  return new Observable(fetchWaitToRun)
+}
+
 Observable.prototype.take = function(count) {
   const source$ = this
 

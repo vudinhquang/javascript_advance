@@ -1,10 +1,8 @@
 
 var searchStr = 'nur'
+var url = 'http://localhost:8888/data?search=' + searchStr
 
-fetch("http://localhost:8888/data?search=" + searchStr)
-    .then(res => {
-        return res.json()
-    })
-    .then(data => {
-        console.log(data)
+Observable.fetch(url)
+    .forEach(data => {
+        console.log(data);
     })
