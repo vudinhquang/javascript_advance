@@ -519,4 +519,5 @@ Xây dựng Autocomplete Component
         Ứng với mỗi string thì sẽ đưa về 1 Observable của fetch
         Tầm vực: Khi khai báo 1 function thì bản thân function cũng là object nên nó được lưu vào trong window(function, var được lưu
             vào trong window) do đó có thể chia sẻ qua 1 file js khác 
-        
+    Stream data
+    
