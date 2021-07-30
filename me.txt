@@ -527,4 +527,10 @@ Xây dựng Autocomplete Component
     Display results
     Loading, empty icon
     Highlight search
+Xây dựng Observable với API chuẩn
+    Observable APIs
+        Chuyển đổi cú pháp từ dạng function về dạng Class
+        complete(): Tùy vào mô hình áp dụng, đối với setTimeout, event thì nó có complete sau 1s. Đối với Interval thì nó ko bao giờ hoàn thành.
+            Chỉ đến khi unsubscribe thì nó mới dừng
+        Áp dụng vào Promise để gọi API thì có next, error, complete
     
