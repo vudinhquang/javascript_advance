@@ -530,7 +530,11 @@ Xây dựng Autocomplete Component
 Xây dựng Observable với API chuẩn
     Observable APIs
         Chuyển đổi cú pháp từ dạng function về dạng Class
+        Interface chuẩn của Observable
         complete(): Tùy vào mô hình áp dụng, đối với setTimeout, event thì nó có complete sau 1s. Đối với Interval thì nó ko bao giờ hoàn thành.
             Chỉ đến khi unsubscribe thì nó mới dừng
         Áp dụng vào Promise để gọi API thì có next, error, complete
+    Observable Class 01
+        live-server --port=8090
+            -> http://127.0.0.1:8090/
     
