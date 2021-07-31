@@ -32,3 +32,14 @@ const obserber = {
       data => console.log('2. interval next run', data)
     )
   
+/**
+* Test operator: TAKE
+*/
+const subTake = Observable
+  .interval(1000)
+  .take(100)
+  .subscribe({
+    next: (data) => console.log('[1. take] next:', data),
+    error: (err) => console.log('[1. take] err:', error),
+    complete: () => console.log('[1. take] complete: ')
+  })

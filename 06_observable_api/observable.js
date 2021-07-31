@@ -81,6 +81,50 @@ window.Observable = (function(){
             }
             return new Observable(_subscribe)
         }
+
+        take(number) {
+            if (number < 0) {
+                throw new Error('ArgumentOutOfRange')
+            }
+      
+            const source$ = this
+            const _subscribe = (observer) => {
+                let counter = 0
+                let subscription = null
+      
+                if (number === 0) {
+                    observer.complete()
+                } else {
+                    subscription = source$.subscribe({
+                        next: (data) => {
+                            observer.next(data)
+                            counter++
+            
+                            if (counter === number) {
+                                observer.complete()
+                                subscription.unsubscribe()
+                            }
+                        },
+                        error: (err) => {
+                            observer.error(err)
+                        },
+                        complete: () => {
+                            observer.complete()
+                        }
+                    })
+                }
+      
+                return {
+                    unsubscribe() {
+                        if (subscription) {
+                            subscription.unsubscribe()
+                        }
+                    }
+                }
+            }
+          
+            return new Observable(_subscribe)
+        }
     }
     
     return Observable

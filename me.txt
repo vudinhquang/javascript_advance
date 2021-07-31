@@ -549,4 +549,5 @@ Xây dựng Observable với API chuẩn
             được vào: const SymbolSubscribe
             -> Module Pattern
     FromEvent
+    take 
     
