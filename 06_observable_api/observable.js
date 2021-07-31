@@ -125,6 +125,59 @@ window.Observable = (function(){
           
             return new Observable(_subscribe)
         }
+
+        map(callback) {
+            const source$ = this
+            const _subscribe = (observer) => {
+                const subscription = source$.subscribe({
+                    next: (data) => {
+                        const newData = callback(data)
+                        observer.next(newData)
+                    },
+                    error: (err) => {
+                        observer.error(err)
+                    },
+                    complete: () => {
+                        observer.complete()
+                    }
+                })
+      
+                return {
+                    unsubscribe() {
+                        subscription.unsubscribe()
+                    }
+                }
+            }
+
+            return new Observable(_subscribe)
+        }
+
+        filter(testFn) {
+            const source$ = this
+            const _subscribe = (observer) => {
+                const subscription = source$.subscribe({
+                    next: (data) => {
+                        if (testFn(data)) {
+                            observer.next(data)
+                        }
+                    },
+                    error: (err) => {
+                        observer.error(err)
+                    },
+                    complete: () => {
+                        observer.complete()
+                    }
+                })
+      
+                return {
+                    unsubscribe() {
+                        subscription.unsubscribe()
+                    }
+                }
+            }
+
+            return new Observable(_subscribe)
+        }
     }
     
     return Observable

@@ -550,4 +550,5 @@ Xây dựng Observable với API chuẩn
             -> Module Pattern
     FromEvent
     take 
+    Map, filter
     
