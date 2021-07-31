@@ -1,65 +1,71 @@
-class Observable {
-    constructor(_subscribe) {
-        this._subscribe = _subscribe
-    }
+window.Observable = (function(){
+    const SymbolSubscribe = Symbol('Subscribe')
 
-    subscribe(next, error, complete) {
-        let observer = null
-    
-        if (typeof next === 'function') {
-            observer = {
-                next: next,
-                error: error || function() {},
-                complete: complete || function() {}
-            }
-        } else {
-            observer = next
-    
-            if (!observer.error) {
-                observer.error = function() {}
-            }
-            if (!observer.complete) {
-                observer.complete = function() {}
-            }
+    class Observable {
+        constructor(_subscribe) {
+            this[SymbolSubscribe] = _subscribe
         }
     
-        return this._subscribe(observer)
-    }
-
-    static timeout(miliseconds) {
-  
-        function _subscribe(observer) {
-
-            const timeoutId = setTimeout(() => {
-                observer.next()
-                observer.complete()
-            }, miliseconds);
+        subscribe(next, error, complete) {
+            let observer = null
         
-            return {
-                unsubscribe() {
-                    clearTimeout(timeoutId)
+            if (typeof next === 'function') {
+                observer = {
+                    next: next,
+                    error: error || function() {},
+                    complete: complete || function() {}
+                }
+            } else {
+                observer = next
+        
+                if (!observer.error) {
+                    observer.error = function() {}
+                }
+                if (!observer.complete) {
+                    observer.complete = function() {}
                 }
             }
+        
+            return this[SymbolSubscribe](observer)
         }
     
-        return new Observable(_subscribe)
-    }
-
-    static interval(miliseconds) {
-  
-        function _subscribe(observer) {
-
-            const intervalId = setInterval(() => {
-                observer.next()
-            }, miliseconds);
-        
-            return {
-                unsubscribe() {
-                    clearInterval(intervalId)
+        static timeout(miliseconds) {
+      
+            function _subscribe(observer) {
+    
+                const timeoutId = setTimeout(() => {
+                    observer.next()
+                    observer.complete()
+                }, miliseconds);
+            
+                return {
+                    unsubscribe() {
+                        clearTimeout(timeoutId)
+                    }
                 }
             }
+        
+            return new Observable(_subscribe)
         }
     
-        return new Observable(_subscribe)
+        static interval(miliseconds) {
+      
+            function _subscribe(observer) {
+    
+                const intervalId = setInterval(() => {
+                    observer.next()
+                }, miliseconds);
+            
+                return {
+                    unsubscribe() {
+                        clearInterval(intervalId)
+                    }
+                }
+            }
+        
+            return new Observable(_subscribe)
+        }
     }
-}
+    
+    return Observable
+})()

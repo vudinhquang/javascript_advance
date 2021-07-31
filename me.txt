@@ -539,4 +539,13 @@ Xây dựng Observable với API chuẩn
             -> http://127.0.0.1:8090/
     Observable Class 02
     Observable Class 03
+    Module Pattern, IIFE
+        Dấu ngầm function _subscribe ở bên dưới
+        Symbol thông thường được dùng làm key cho 1 Object nên có thể ứng dụng được cho trường hợp che dấu đi 1 method, chỉ thấy được method
+            chứ ko gọi được method đó theo kiểu Object.method
+        Muốn truy cập được vào method được dấu này thì phải truy cập vào biến được gán giá trị Symbol
+            const SymbolSubscribe = Symbol('Subscribe')
+        Không muốn người dùng truy cập thì mình dấu đi biến SymbolSubscribe. Người dùng chỉ có thể truy cập được vào Observable mà ko truy cập 
+            được vào: const SymbolSubscribe
+            -> Module Pattern
     
