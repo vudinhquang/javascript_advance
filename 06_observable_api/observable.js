@@ -178,6 +178,48 @@ window.Observable = (function(){
 
             return new Observable(_subscribe)
         }
+
+        debounceTime(miliseconds) {
+            const source$ = this
+            const _subscribe = (observer) => {
+                let timeoutId = null
+                let isSource$Complete = false
+        
+                const subscription = source$.subscribe({
+                    next: (data) => {
+                        if (timeoutId) {
+                            clearTimeout(timeoutId)
+                            timeoutId = null
+                        }
+        
+                        timeoutId = setTimeout(() => {
+                            observer.next(data)
+                            timeoutId = null
+                            if (isSource$Complete) {
+                                observer.complete()
+                            }
+                        }, miliseconds);
+                    },
+                    error: (err) => {
+                        observer.error(err)
+                    },
+                    complete: () => {
+                        isSource$Complete = true
+                        if (timeoutId === null) {
+                            observer.complete()
+                        }
+                    }
+                })    
+        
+                return {
+                    unsubscribe() {
+                        subscription.unsubscribe()
+                    }
+                }
+            }
+
+            return new Observable(_subscribe)
+        }
     }
     
     return Observable
