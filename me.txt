@@ -561,4 +561,7 @@ Reactive Programming với thư viện RxJS
     RxJs Version 5.x
         live-server --port=8090
         window.Rx.Observable.prototype: Xem danh sách các hàm 
+    ConcatAll
+        Đối với Array thì hàm này giúp chuyển đổi 1 Array 2 chiều thành 1 chiều, 3 chiều thành 2 chiều
+        Thường dùng trong trường hợp 1 Observable nồng 1 Observable khác ở bên trong 
     
