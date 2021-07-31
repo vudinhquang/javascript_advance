@@ -554,4 +554,11 @@ Xây dựng Observable với API chuẩn
     DebounceTime
     buffer
     FromFetch
+Reactive Programming với thư viện RxJS
+    Thực tế thì không nhất thiết phải tự xây dựng lại Observable mà có rất nhiều thư viện hỗ trợ làm việc đó
+        trong đó có RxJs
+        https://rxjs.dev/guide/overview
+    RxJs Version 5.x
+        live-server --port=8090
+        window.Rx.Observable.prototype: Xem danh sách các hàm 
     
