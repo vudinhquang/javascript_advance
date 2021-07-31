@@ -552,4 +552,5 @@ Xây dựng Observable với API chuẩn
     take 
     Map, filter
     DebounceTime
+    buffer
     
