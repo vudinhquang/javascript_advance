@@ -75,3 +75,17 @@ const subFilter = Observable
     error: (err) => console.log('[3. filter] err:', error),
     complete: () => console.log('[3. filter] complete: ')
   })
+  
+  /**
+ * Test operator: fromFetch
+ */
+Observable.fromFetch('https://api.github.com/users')
+  .subscribe({
+    next: data => console.log('success', data)
+  })
+// unsubscribe
+Observable.fromFetch('https://api.github.com/users')
+  .subscribe({
+    next: data => console.log('success', data)
+  })
+  .unsubscribe()

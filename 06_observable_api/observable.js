@@ -82,6 +82,34 @@ window.Observable = (function(){
             return new Observable(_subscribe)
         }
 
+        static fromFetch(url, request = {}) {
+            const _subscribe = (observer) => {
+                const controller = new AbortController();
+                const signal = controller.signal;
+        
+                const params = {
+                    ...request,
+                    signal
+                }
+                fetch(url, params)
+                    .then(res => {
+                        observer.next(res)
+                        observer.complete()
+                    })
+                    .catch(err => {
+                        observer.error(err)
+                    })
+        
+                return {
+                    unsubscribe() {
+                        controller.abort();
+                    }
+                }
+            }
+
+            return new Observable(_subscribe)
+        }
+
         take(number) {
             if (number < 0) {
                 throw new Error('ArgumentOutOfRange')
