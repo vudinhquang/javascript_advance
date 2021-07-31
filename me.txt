@@ -548,4 +548,5 @@ Xây dựng Observable với API chuẩn
         Không muốn người dùng truy cập thì mình dấu đi biến SymbolSubscribe. Người dùng chỉ có thể truy cập được vào Observable mà ko truy cập 
             được vào: const SymbolSubscribe
             -> Module Pattern
+    FromEvent
     
