@@ -567,4 +567,6 @@ Reactive Programming với thư viện RxJS
     Autocomplete 01
     Race Conditions 01
     Race Conditions 02
+    Autocomplete 02
+        Dùng concatAll() để chuyển Observable 2 chiều thành Observable 1 chiều
     
