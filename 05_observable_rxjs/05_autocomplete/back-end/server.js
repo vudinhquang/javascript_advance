@@ -31,15 +31,15 @@ app.get("/data", (req, res) => {
     offset = 0;
   }
 
-  // count++;
+  count++;
   
-  // // if (count === 1) {
-  // //   randomMiliseconds = 5000
-  // // } else if (count === 2) {
-  // //   randomMiliseconds = 1000
-  // // }
+  if (count === 1) {
+    randomMiliseconds = 5000
+  } else if (count === 2) {
+    randomMiliseconds = 1000
+  }
 
-  const randomMiliseconds = Math.floor(Math.random() * 1000) + 500;
+  // const randomMiliseconds = Math.floor(Math.random() * 1000) + 500;
   setTimeout(() => {
     res.send(dataSearch.slice(Number(offset), Number(limit) + Number(offset)));
   }, randomMiliseconds);
