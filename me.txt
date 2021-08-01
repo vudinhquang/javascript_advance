@@ -577,4 +577,10 @@ Reactive Programming với thư viện RxJS
         Chỉ đơn giản là chuyển đổi Observable 2 chiều về Observable 1 chiều 
         Không làm quá trình bị delay
         Vấn đề Race Conditions vẫn còn tồn tại nên không đảm bảo được đúng thứ tự
-    
+    SwitchAll
+        Khi người dùng nhập vào các ký tự nào đó thì mong muốn của mình sẽ nhận được giá trị mới nhất của người dùng 
+            nhập vào. Luôn luôn nhận tín hiệu mới nhất từ người dùng nhập vào. Hủy bỏ tất cả các hành động nhập vào trước 
+            đó của người dùng để nhận tín hiệu nhập vào mới nhất 
+        Bản chất của việc hủy đi các tín hiệu trước đó là việc ko nhận tín hiệu trả về, thực tế là request đã được gửi đến 
+            server, server đã nhận và xử lý request
+        
