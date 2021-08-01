@@ -569,4 +569,12 @@ Reactive Programming với thư viện RxJS
     Race Conditions 02
     Autocomplete 02
         Dùng concatAll() để chuyển Observable 2 chiều thành Observable 1 chiều
+        concatAll() có quan tâm đến thứ tự, gọi api lần 1 thì đợi complete xong api gọi lần 2 mơi được thực hiện
+            -> Làm quá trình bị delay
+        Vấn đề Race Conditions không còn tồn tại nên đảm bảo được đúng thứ tự
+    MergeAll
+        Không quan tâm đến thứ tự 
+        Chỉ đơn giản là chuyển đổi Observable 2 chiều về Observable 1 chiều 
+        Không làm quá trình bị delay
+        Vấn đề Race Conditions vẫn còn tồn tại nên không đảm bảo được đúng thứ tự
     
