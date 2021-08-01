@@ -587,4 +587,8 @@ Reactive Programming với thư viện RxJS
         switchMap: Gọi map rồi switch 
         concatMap: Gọi map rồi sau đó gọi concatAll
         mergeMap: Gọi map rồi sau đó gọi MergeAll
-    
+    RxJs Version 7.x
+        live-server --port=8090
+        pipe(): rxjs được hiện thực dựa trên Observable, dòng dữ liệu gửi về được coi như 1 dòng stream, các hàm dùng để tương tác biến 
+            đổi dữ liệu là các hàm trong rxjs.operators được kẹp trong hàm pipe() 
+        
