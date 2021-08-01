@@ -70,4 +70,5 @@ $.......D..$
 
 ---------------------
 
+4. switchMap, concatMap, mergeMap
 */

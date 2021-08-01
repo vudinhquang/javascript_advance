@@ -64,15 +64,21 @@ function autoComplete() {
       .map(evt => evt.target.value)
       .debounceTime(400)
       .filter((searchStr) => searchStr.length >= 2)
-      .map((searchStr) => {
-          queryStr = searchStr
-          return makeURLSearch(searchStr)
-      })
-      .map((url) => {
+      // .map((searchStr) => {
+      //     queryStr = searchStr
+      //     return makeURLSearch(searchStr)
+      // })
+      // .map((url) => {
+      //   resultsEl.innerHTML = renderIconLoading()
+      //   return Observable.ajax(url)
+      // })
+      // .switch()
+      .switchMap((searchStr) => {
+        queryStr = searchStr
         resultsEl.innerHTML = renderIconLoading()
+        url = makeURLSearch(searchStr)
         return Observable.ajax(url)
       })
-      .switch()
       .subscribe(data => {
         const strHTML = handleMapArrayToHTML(data)
         if (strHTML === "") {
